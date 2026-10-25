@@ -39,10 +39,10 @@ jobs:
       - name: Build Docs
         env:
           NODE_OPTIONS: --max_old_space_size=4096
-          # 不使用 linux 目录分割符
+          # 使用 linux 目录分割符
         run: |-
           pnpm run docs:build
-          > src\.vuepress\dist\.nojekyll
+          > src/.vuepress/dist/.nojekyll
 
       - name: Deploy Docs
         uses: JamesIves/github-pages-deploy-action@v4
